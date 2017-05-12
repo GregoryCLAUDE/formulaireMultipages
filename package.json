@@ -1,0 +1,23 @@
+{
+  "name": "formMultPages",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "bootstrap": "^3.3.7",
+    "express": "^4.15.2",
+    "jade": "^1.11.0",
+    "jade-bootstrap": "^1.0.12",
+    "jquery": "^3.2.1",
+    "nodemon": "^1.11.0",
+    "validator": "^7.0.0"
+  }
+}
