@@ -14,11 +14,11 @@ html
 	form(action="/page2", method="post")
 		.form-group
 			label(for="name") Nom
-			input(type="text", name="name", id="name", placeholder="nom", required="true" )
+			input(type="text", name="name", id="name", placeholder="nom", )
 
 		.form-group
 			label(for="forname") Prénom
-			input(type="text", name="forname", id="forname", placeholder="prenom", required="true")
+			input(type="text", name="forname", id="forname", placeholder="prenom",)
 
 		.form-group
 			label(for="birthdate") Date de naissance
@@ -26,7 +26,7 @@ html
 
 		.form-group
 			label(for="adress") Adresse
-			textarea(name="adress", id="adress", required="true")
+			textarea(name="adress", id="adress", )
 		button(type="submit") valider
 
 		script( src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js' )

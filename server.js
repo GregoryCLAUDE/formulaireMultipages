@@ -12,17 +12,32 @@ app.use(bodyparser.json());
 
 
 function toStringAlpha (string){
-	string.replace("-", "").split(" ").join("");
+
+	return string.replace("-", "").split(" ").join("");
 }
 
 function validateAlpha(data){
 	var errors={};
-		
-		if( validator.isAlpha(toStringAlpha(data.name)==false)){
+		 	
+		if( !validator.isAlpha(toStringAlpha(data.name))){
 			errors.name = "pas de caractere spéciaux"
-	}
-	
+		}
+		if (!validator.isAlpha(toStringAlpha(data.forname))){
+			errors.forename ="pas de caractere spéciaux"
+		}
+		if (!validator.isEmpty(data.name)){
+			errors.name = "Veuillez renseigner ce champ"
+		}
+		if (!validator.isEmpty(data.forname)){
+			errors.forename = "Veuillez renseigner ce champ"
+		}
+		if (!validator.isEmpty(data.adress)){
+			errors.adress = "Veuillez renseigner ce champ"	
+		}
+		console.log(errors);
+		return errors;
 }
+
 
 
 app.get("/", function(req, res){
@@ -32,8 +47,7 @@ app.get("/", function(req, res){
 });
 
 app.post("/page2", function(req, res){
-	console.log(validateAlpha(req.body))
-	console.log(req.body)
+	validateAlpha(req.body)
 	res.render("page2")
 });
 
